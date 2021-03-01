@@ -6,7 +6,7 @@
 
 ## 🌠 Output
 
-<img width="400" alt="Sample image of output" src="sample.jpeg" />
+<img width="400" alt="Sample image of output" src="sample1.jpeg" />
 
 
 ## 📚 Libraries used
