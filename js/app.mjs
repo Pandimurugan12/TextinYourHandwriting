@@ -10,20 +10,6 @@ import {
 } from './generate-images.mjs';
 import { setInkColor, toggleDrawCanvas } from './utils/draw.mjs';
 
-/**
- *
- * Hi there! This is the entry file of the tool and deals with adding event listeners
- * and some other functions.
- *
- * To contribute, you can follow the imports above and make changes in the file
- * related to the issue you've choosen.
- *
- * If you have any questions related to code, you can drop them in my Twitter DM @saurabhcodes
- * or in my email at saurabhdaware99@gmail.com
- *
- * Thanks! and Happy coding 🌻
- *
- */
 
 const pageEl = document.querySelector('.page-a');
 
@@ -47,15 +33,36 @@ const EVENT_MAP = {
   },
   '#font-size': {
     on: 'change',
-    action: (e) => setTextareaStyle('fontSize', e.target.value + 'pt')
+    action: (e) => {
+      if (e.target.value > 30) {
+        alert('Font-size is too big try upto 30');
+      } else {
+        setTextareaStyle('fontSize', e.target.value + 'pt');
+        e.preventDefault();
+      }
+    }
   },
   '#letter-spacing': {
     on: 'change',
-    action: (e) => setTextareaStyle('letterSpacing', e.target.value + 'pt')
+    action: (e) =>  {
+      if (e.target.value > 40) {
+        alert('Letter Spacing is too big try a number upto 40');
+      } else {
+        setTextareaStyle('letterSpacing', e.target.value + 'px');
+        e.preventDefault();
+      }
+    }
   },
   '#word-spacing': {
     on: 'change',
-    action: (e) => setTextareaStyle('wordSpacing', e.target.value + 'px')
+    action: (e) =>  {
+      if (e.target.value > 100) {
+        alert('Word Spacing is too big try a number upto hundred');
+      } else {
+        setTextareaStyle('wordSpacing', e.target.value + 'px');
+        e.preventDefault();
+      }
+    }
   },
   '#top-padding': {
     on: 'change',
@@ -184,3 +191,4 @@ fetch(
       )
       .join('');
   });
+
