@@ -142,7 +142,7 @@
                   <div class="display-flex left-margin-and-content">
                     <div contenteditable="true" class="left-margin"></div>
                     <div class="paper-content" id="note" contenteditable="true">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                       ipsum dolor sit amet, consectetur adipiscing elit.
                       Ut rhoncus dui eget tortor feugiat iaculis. Morbi et dolor
                       in felis viverra efficitur. Integer id laoreet arcu.
                       Mauris turpis nibh, scelerisque sed tristique non,
@@ -282,6 +282,15 @@
                       <option default value="shadows">Shadows</option>
                       <option value="scanner">Scanner</option>
                       <option value="no-effect">No Effect</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="block" for="fonttype">Font Type</label>
+                    <select id="fonttype">
+                      <option default value="shadows" >None</option>
+                      <option value="italic" onclick="document.execCommand('italic',false,null);" title="Italicize Highlighted Text"><i></i>Italic</option>
+                      <option value="bold" onclick="document.execCommand('bold',false,null);" title="Bold Highlighted Text"><b></b>Bold</option>
+                      <option value="underline" onclick="document.execCommand('underlone',false,null);" title="Underlined Highlighted Text"><u></u>Underlined</option>
                     </select>
                   </div>
                   <div>

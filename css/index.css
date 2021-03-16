@@ -456,3 +456,8 @@ input[type='file']::before {
 		margin-top: 10px;
 	}
 }
+
+.paper-content {
+	padding-top: 5px;
+	margin-left: 30px;
+}
